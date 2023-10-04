@@ -1,12 +1,12 @@
 from include.gms import gms
 
 while True:
-	szSelect = input("Make select (file, text): ")
+    szSelect = input("Make select (file, text): ")
 
-	if szSelect == "file":
-		szFileName = input("Enter file path: ")
-
-		try:
+    if szSelect == "file":
+        szFileName = input("Enter file path: ")
+		
+	try:
             with open(szFileName, "rb") as file:
                 byte = file.read()
                 print(gms(str(byte)[2:-1]))
@@ -14,5 +14,5 @@ while True:
         except Exception as e:
             print(str(e))
 
-	elif szSelect == "text":
-		print(gms(input("Enter text to hash: ")))
+    elif szSelect == "text":
+	print(gms(input("Enter text to hash: ")))
