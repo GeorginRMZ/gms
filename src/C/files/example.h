@@ -6,7 +6,7 @@
 char filename[BUFFER];
 FILE* fileptr;
 BYTE* buffer;
-//GMS* filecrypt;
+GMS filecrypt;
 long int* filelen;
 
 void ReleaseMemory();
